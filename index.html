@@ -303,6 +303,32 @@
 
     <script>
       const share = document.querySelector(".articleBox__shareActive");
+      const userDate = document.querySelector(
+        ".articleBox__userInfo p:last-child"
+      );
+
+      // This is not necessary I'm just doing it for fun 😁
+      const months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      let mm = today.getMonth();
+      let dd = today.getDate();
+
+      userDate.textContent = dd + " " + months[mm] + " " + yyyy;
 
       function openShare() {
         share.style.opacity = "1";
